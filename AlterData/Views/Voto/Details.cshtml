@@ -1,0 +1,43 @@
+@model AlterData.Models.VwVotoListagem
+
+@{
+    ViewData["Title"] = "Meu voto";
+}
+
+<h4>Meu voto (não é possível votar mais de uma vez)</h4>
+
+<div>
+  
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.dt_voto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.dt_voto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.hr_voto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hr_voto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.recurso)
+        </dt>
+        
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.recurso)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.comentario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.comentario)
+        </dd>
+    </dl>
+</div>
+<div>
+    
+    <a asp-action="Index">Resultados</a>
+</div>

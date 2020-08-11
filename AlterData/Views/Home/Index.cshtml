@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using Microsoft.AspNetCore.Http;
+
+<div class="text-center">
+    <h1 class="display-4">
+        Seja bem vindo!
+        @Context.Session.GetString("nomeUsuarioLogado");
+    </h1>
+
+</div>

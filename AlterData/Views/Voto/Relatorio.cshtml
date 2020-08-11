@@ -1,0 +1,61 @@
+@model IEnumerable<AlterData.Models.VwVotoListagem>
+
+@{
+    ViewData["Title"] = "Relatório";
+}
+
+<h1>Relatório de votos</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idvoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dt_voto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hr_voto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funcionario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.recurso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comentario)
+            </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idvoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dt_voto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hr_voto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funcionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recurso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comentario)
+            </td>
+
+
+        </tr>
+}
+    </tbody>
+</table>
